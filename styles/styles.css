@@ -133,6 +133,7 @@
 
   }
   .mobile-menu a {
+    background-color: var(--white);
     text-decoration: none;
     color: var(--black);
     font-weight: bold;
@@ -159,8 +160,9 @@
   }
 /*Shopping cart*/
 .product-detail {
+  background-color: var(--hospital-green);
   width: 360px;
-  padding: 24px;
+  padding: 0 24px;
   box-sizing: border-box;
   position: absolute;
   right: 0;
@@ -249,7 +251,7 @@
     .desktop-menu {
       display: none;
     }
-    /*Shopping cart*/
+    /*aside y Shopping cart*/
     .product-detail {
       width: 100%;
     }
