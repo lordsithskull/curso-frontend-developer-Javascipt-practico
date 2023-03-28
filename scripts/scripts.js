@@ -13,13 +13,34 @@ menuCarritoIcon.addEventListener('click',toggleCarritoAside)
 
 /*funciones de menu*/
 function toggleDesktopMenu () {
+    const isCarritoAside = aside.classList.contains ('inactive');
+    //cerrar otro menu
+    if (!isCarritoAside) {
+        aside.classList.add('inactive');
+    }
+    
     dektopMenu.classList.toggle('inactive');
 }
 
 function toggleMobileMenu () {
+    const isCarritoAside = aside.classList.contains ('inactive');
+    //cerrar otro menu
+    if (!isCarritoAside) {
+        aside.classList.add('inactive');
+    }
+
     mobileMenu.classList.toggle('inactive');
 }
 
 function toggleCarritoAside () {
-    aside.classList.toggle('inactive');
+    const isMobileMenuClosed = mobileMenu.classList.contains ('inactive');
+    const isDektopMenu = dektopMenu.classList.contains ('inactive');
+    //cerrar otro menu
+    if (!isMobileMenuClosed || isDektopMenu) {
+        mobileMenu.classList.add('inactive');
+    }
+
+    dektopMenu.classList.toggle('inactive'); 
+    aside.classList.toggle('inactive'); 
 }
+
