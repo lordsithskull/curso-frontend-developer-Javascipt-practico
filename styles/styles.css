@@ -217,7 +217,7 @@
   object-fit: cover;
 }
 .shopping-cart p:nth-child(2) {
-  color: var(--very-light-pink);
+  color: var(--black);
 }
 .shopping-cart p:nth-child(3) {
   font-size: var(--md);
