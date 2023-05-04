@@ -159,7 +159,7 @@
     color: var(--hospital-green) !important;
   }
 /*Shopping cart*/
-.product-detail {
+aside {
   background-color: var(--hospital-green);
   width: 360px;
   padding: 0 24px;
@@ -294,7 +294,7 @@
       display: none;
     }
     /*aside y Shopping cart*/
-    .product-detail {
+    aside {
       width: 100%;
     }
     /*cart container*/
