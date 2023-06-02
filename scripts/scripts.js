@@ -4,12 +4,14 @@ const menuHamIcon = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
 const shoppingCartDetail = document.querySelector('#shoppingCartDetail');
-const cardsContainer = document.querySelector('.cards-container')
-
+const cardsContainer = document.querySelector('.cards-container');
+const infoWindows = document.querySelector('#infoWindow');
+const infoWindowsClose = document.querySelector('.infoWindow-close');
 
 menuEmail.addEventListener('click',toggleDesktopMenu)
 menuHamIcon.addEventListener('click',toggleMobileMenu)
 menuCarritoIcon.addEventListener('click',toggleCarritoAside)
+infoWindowsClose.addEventListener('click',toggleInfoWindowsClose)
 
 /*funciones de menu*/
 function toggleDesktopMenu () {
@@ -44,6 +46,15 @@ function toggleCarritoAside () {
     shoppingCartDetail.classList.toggle('inactive'); 
 }
 
+function productImageOpen () {
+    infoWindows.classList.remove('inactive');    
+}
+
+function toggleInfoWindowsClose () {
+        infoWindows.classList.add('inactive');
+   // dektopMenu.classList.toggle('inactive');
+}
+
 //Cart container
 const productList = [];
 productList.push({
@@ -64,6 +75,7 @@ productList.push({
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 });
 
+
 //Funcion para generar Productos
 function renderProducts(array) {
 
@@ -73,6 +85,7 @@ function renderProducts(array) {
     
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
+        productImg.addEventListener('click',productImageOpen)
     
         const productInfo =  document.createElement('div');
         productInfo.classList.add('product-info');
