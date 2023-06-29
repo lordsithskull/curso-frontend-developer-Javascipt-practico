@@ -124,7 +124,7 @@
   /*Mobile Menu  */
   .mobile-menu {
     position: absolute;
-    width: 100%;
+    width: 70%;
     top:61px;
     left:5px;
     padding: 24px;
@@ -432,7 +432,7 @@ aside {
     }
     /*aside y Shopping cart*/
     aside {
-      width: 100%;
+      width: 80%;
     }
     /*cart container*/
     .cards-container {

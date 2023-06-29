@@ -16,43 +16,60 @@ infoWindowsClose.addEventListener('click',toggleInfoWindowsClose)
 /*funciones de menu*/
 function toggleDesktopMenu () {
     const isCarritoAside = shoppingCartDetail.classList.contains ('inactive');
+    const isInfoWindows = infoWindows.classList.contains ('inactive');
     //cerrar otro menu
     if (!isCarritoAside) {
         shoppingCartDetail.classList.add('inactive');
     }
     
     dektopMenu.classList.toggle('inactive');
+
+     if (!isInfoWindows) {
+        toggleInfoWindowsClose ();
+     }    
+    
+
 }
 
 function toggleMobileMenu () {
     const isCarritoAside = shoppingCartDetail.classList.contains ('inactive');
+    const isInfoWindows = infoWindows.classList.contains ('inactive');
     //cerrar otro menu
     if (!isCarritoAside) {
         shoppingCartDetail.classList.add('inactive');
     }
 
     mobileMenu.classList.toggle('inactive');
+
+    dektopMenu.classList.toggle('inactive');
+
+    if (!isInfoWindows) {
+       toggleInfoWindowsClose ();
+    }   
 }
 
 function toggleCarritoAside () {
     const isMobileMenuClosed = mobileMenu.classList.contains ('inactive');
-    const isDektopMenu = dektopMenu.classList.contains ('inactive');
+    
     //cerrar otro menu
-    if (!isMobileMenuClosed || isDektopMenu) {
+    if (!isMobileMenuClosed) {
         mobileMenu.classList.add('inactive');
     }
-
     dektopMenu.classList.toggle('inactive'); 
     shoppingCartDetail.classList.toggle('inactive'); 
+    toggleInfoWindowsClose ();
 }
 
+
 function productImageOpen () {
-    infoWindows.classList.remove('inactive');    
+    dektopMenu.classList.add('inactive');    
+    
+    infoWindows.classList.remove('inactive');
+        
 }
 
 function toggleInfoWindowsClose () {
-        infoWindows.classList.add('inactive');
-   // dektopMenu.classList.toggle('inactive');
+        infoWindows.classList.add('inactive');   
 }
 
 //Cart container
