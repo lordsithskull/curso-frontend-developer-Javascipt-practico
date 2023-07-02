@@ -50,7 +50,7 @@ function toggleMobileMenu () {
 
 function toggleCarritoAside () {
     const isMobileMenuClosed = mobileMenu.classList.contains ('inactive');
-    
+     
     //cerrar otro menu
     if (!isMobileMenuClosed) {
         mobileMenu.classList.add('inactive');
@@ -63,7 +63,8 @@ function toggleCarritoAside () {
 
 function productImageOpen () {
     dektopMenu.classList.add('inactive');    
-    
+    mobileMenu.classList.add ('inactive');
+    shoppingCartDetail.classList.add('inactive'); 
     infoWindows.classList.remove('inactive');
         
 }
